@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     geometry_msgs::Twist cmd_vel_message;
     cmd_vel_message.angular.z = 1;
-    cmd_vel_message.linear.x = 3; 
+    cmd_vel_message.linear.x = 2; 
 
     ros::Rate loop_rate(10);
     while(ros::ok())
