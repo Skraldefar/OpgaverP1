@@ -40,6 +40,16 @@ set_target_properties(${PROJECT_NAME}_Turtleroundweeee PROPERTIES OUTPUT_NAME Tu
 target_link_libraries(${PROJECT_NAME}_Turtleroundweeee
   ${catkin_LIBRARIES}
 )
+add_executable(${PROJECT_NAME}_helloworld src/helloworld.cpp)
+set_target_properties(${PROJECT_NAME}_helloworld PROPERTIES OUTPUT_NAME helloworld PREFIX "")
+target_link_libraries(${PROJECT_NAME}_helloworld
+  ${catkin_LIBRARIES}
+)
+add_executable(${PROJECT_NAME}_functions src/functions.cpp)
+set_target_properties(${PROJECT_NAME}_functions PROPERTIES OUTPUT_NAME functions PREFIX "")
+target_link_libraries(${PROJECT_NAME}_functions
+  ${catkin_LIBRARIES}
+)
 
 
 
@@ -51,5 +61,7 @@ target_link_libraries(${PROJECT_NAME}_Turtleroundweeee
 
  install(TARGETS
  ${PROJECT_NAME}_Turtleroundweeee
+ ${PROJECT_NAME}_helloworld
+ ${PROJECT_NAME}_functions
  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
