@@ -12,6 +12,7 @@ int smallnumber()
     int ito {};
     for(int i = 0; i < Numre.size()-1; i++)
     {
+        
 
     for(int i = 0; i<Numre.size()-1; i++)
     {
