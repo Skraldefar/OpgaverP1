@@ -50,7 +50,21 @@ set_target_properties(${PROJECT_NAME}_functions PROPERTIES OUTPUT_NAME functions
 target_link_libraries(${PROJECT_NAME}_functions
   ${catkin_LIBRARIES}
 )
-
+add_executable(${PROJECT_NAME}_Test src/Test.cpp)
+set_target_properties(${PROJECT_NAME}_Test PROPERTIES OUTPUT_NAME Test PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Test
+  ${catkin_LIBRARIES}
+)
+add_executable(${PROJECT_NAME}_Smallest src/Smallest.cpp)
+set_target_properties(${PROJECT_NAME}_Smallest PROPERTIES OUTPUT_NAME Smallest PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Smallest
+  ${catkin_LIBRARIES}
+)
+add_executable(${PROJECT_NAME}_Algorithm src/Algorithm.cpp)
+set_target_properties(${PROJECT_NAME}_Algorithm PROPERTIES OUTPUT_NAME Algorithm PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Algorithm
+  ${catkin_LIBRARIES}
+)
 
 
 ## Specify libraries to link a library or executable target against
@@ -63,5 +77,8 @@ target_link_libraries(${PROJECT_NAME}_functions
  ${PROJECT_NAME}_Turtleroundweeee
  ${PROJECT_NAME}_helloworld
  ${PROJECT_NAME}_functions
+ ${PROJECT_NAME}_Test
+ ${PROJECT_NAME}_Smallest
+ ${PROJECT_NAME}_Algorithm
  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

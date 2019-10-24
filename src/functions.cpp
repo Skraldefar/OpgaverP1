@@ -1,20 +1,40 @@
 #include <iostream>
-#include <string.h>
+#include <vector>
 
+double values[] {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50};
+int antal[11] {};
 
-void outputName(std::string var)
+void calculate(double penge)
 {
-    std::cout << "\nMy name is " << var << std::endl;
+    
+    
+    for(int i=0; i<11; i++)
+    {
+        antal[i] = penge/values[i];
+        penge -= values[i]*antal[i];
+    }
+    
+    
 }
+
+
 
 int main()
 {
-    std::string name;
-    std::cout << "Input a name: ";
-    std::cin >> name;
-    outputName(name);
+    double penge {};
+    std::cout << "Indtast hvor mange penge du har: ";
+    std::cin >> penge;
+    calculate(penge);
+
+    std::cout << "Det svarer til at du har: \n";
+    for(int i=0; i<11; i++)
+    {
+        std::cout << antal[i] << " stk. " << values[i] << "kr." << std::endl;
+    }
+
+
     
     return 0;
-}
+} 
 
 
