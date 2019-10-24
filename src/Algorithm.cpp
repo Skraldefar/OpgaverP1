@@ -70,7 +70,11 @@ string mutate(string mutString)
 int main()
 {
     srand(time(NULL));
-    string Target = {"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"};
+    cout << "Velkommen stranger, jeg kan gætte sætninger som du bestemmer." << endl << endl;
+    cout << "Indtast nu hvad jeg skal finde frem til, brug kun store bogstaver, små er for de svage, undgå også Æ, Ø & Å: ";
+    string Target = {""};
+    getline(cin, Target);
+    cout << endl;
     string generationString = initString(Target.length());
 
     string currentString = {generationString};
@@ -97,7 +101,18 @@ int main()
        generationString = currentString;
         cout << "Generation " << x++ << ": " << generationString << ", Score " << score << endl;
     }
-    
-    cout << "It has been done, I am pure genious >:-)" << endl;
+    if(x < 100)
+    {
+        cout << "Pfff, det var jo nemt, det tog kun " << x <<  " forsøg, kom med noget sværere" << endl;
+    }
+    else if (x > 1000)
+    {
+        cout << "Se den var værre, " << x << " forsøg, men jeg klarede den" << endl;
+    }
+    else 
+    {
+        cout << "Nemt nemt nemt, " << x << " forsøg" << endl;
+    }
+
     return 0;
 }
