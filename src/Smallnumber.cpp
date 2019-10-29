@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 
-int Vectorsize {};
-std::vector<int> Numre (Vectorsize);
 
-int smallnumber()
+
+int smallnumber(std::vector<int>& Numre)
 {
     int ien {};
     int ito {};
@@ -36,10 +35,11 @@ int smallnumber()
 int main()
 {
     int input {};
-    
+    int Vectorsize {};
+    std::vector<int> Numre (Vectorsize);
    
     std::cout << "size vector " << Numre.size() << std::endl;
-    std::cout << smallnumber() << std::endl;
+    std::cout << smallnumber(Numre) << std::endl;
 
 
 

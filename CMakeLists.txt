@@ -82,6 +82,30 @@ target_link_libraries(${PROJECT_NAME}_Smallnumber
   ${catkin_LIBRARIES}
 )
 
+add_executable(${PROJECT_NAME}_Recursion1 src/Recursion1.cpp)
+set_target_properties(${PROJECT_NAME}_Recursion1 PROPERTIES OUTPUT_NAME Recursion1 PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Recursion1
+  ${catkin_LIBRARIES}
+)
+
+add_executable(${PROJECT_NAME}_RecusionTask src/RecusionTask.cpp)
+set_target_properties(${PROJECT_NAME}_RecusionTask PROPERTIES OUTPUT_NAME RecusionTask PREFIX "")
+target_link_libraries(${PROJECT_NAME}_RecusionTask
+  ${catkin_LIBRARIES}
+)
+
+add_executable(${PROJECT_NAME}_Hanoi src/Hanoi.cpp)
+set_target_properties(${PROJECT_NAME}_Hanoi PROPERTIES OUTPUT_NAME Hanoi PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Hanoi
+  ${catkin_LIBRARIES}
+)
+
+add_executable(${PROJECT_NAME}_Sorter src/Sorter.cpp)
+set_target_properties(${PROJECT_NAME}_Sorter PROPERTIES OUTPUT_NAME Sorter PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Sorter
+  ${catkin_LIBRARIES}
+)
+
 
 ## Specify libraries to link a library or executable target against
  #target_link_libraries(${PROJECT_NAME}_node
@@ -99,5 +123,10 @@ target_link_libraries(${PROJECT_NAME}_Smallnumber
  ${PROJECT_NAME}_struct
  ${PROJECT_NAME}_Trees
  ${PROJECT_NAME}_Smallnumber
+ ${PROJECT_NAME}_Recursion1
+ ${PROJECT_NAME}_RecusionTask
+ ${PROJECT_NAME}_Hanoi
+ ${PROJECT_NAME}_Sorter
+
  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
