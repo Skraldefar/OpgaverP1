@@ -106,6 +106,12 @@ target_link_libraries(${PROJECT_NAME}_Sorter
   ${catkin_LIBRARIES}
 )
 
+add_executable(${PROJECT_NAME}_QuickSort src/QuickSort.cpp)
+set_target_properties(${PROJECT_NAME}_QuickSort PROPERTIES OUTPUT_NAME QuickSort PREFIX "")
+target_link_libraries(${PROJECT_NAME}_QuickSort
+  ${catkin_LIBRARIES}
+)
+
 
 ## Specify libraries to link a library or executable target against
  #target_link_libraries(${PROJECT_NAME}_node
@@ -127,6 +133,7 @@ target_link_libraries(${PROJECT_NAME}_Sorter
  ${PROJECT_NAME}_RecusionTask
  ${PROJECT_NAME}_Hanoi
  ${PROJECT_NAME}_Sorter
+ ${PROJECT_NAME}_QuickSort
 
  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
