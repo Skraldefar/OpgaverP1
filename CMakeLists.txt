@@ -66,6 +66,17 @@ target_link_libraries(${PROJECT_NAME}_Algorithm
   ${catkin_LIBRARIES}
 )
 
+add_executable(${PROJECT_NAME}_struct src/struct.cpp)
+set_target_properties(${PROJECT_NAME}_struct PROPERTIES OUTPUT_NAME struct PREFIX "")
+target_link_libraries(${PROJECT_NAME}_struct
+  ${catkin_LIBRARIES}
+)
+add_executable(${PROJECT_NAME}_Trees src/Trees.cpp)
+set_target_properties(${PROJECT_NAME}_Trees PROPERTIES OUTPUT_NAME Trees PREFIX "")
+target_link_libraries(${PROJECT_NAME}_Trees
+  ${catkin_LIBRARIES}
+)
+
 
 ## Specify libraries to link a library or executable target against
  #target_link_libraries(${PROJECT_NAME}_node
@@ -80,5 +91,7 @@ target_link_libraries(${PROJECT_NAME}_Algorithm
  ${PROJECT_NAME}_Test
  ${PROJECT_NAME}_Smallest
  ${PROJECT_NAME}_Algorithm
+ ${PROJECT_NAME}_struct
+ ${PROJECT_NAME}_Trees
  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
